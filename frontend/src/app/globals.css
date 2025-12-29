@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+/* globals.css */
+#__next-route-announcer {
+  display: none !important;
+}
