@@ -130,11 +130,6 @@ EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password
 ```
 
-#### Frontend (`frontend/.env.local`)
-```env
-NEXT_PUBLIC_USER_SERVICE_URL=http://localhost:3001
-NEXT_PUBLIC_CHAT_SERVICE_URL=http://localhost:3002
-```
 
 ### 3. Install Dependencies
 
@@ -327,4 +322,3 @@ This project is licensed under the ISC License.
 ---
 
 ⭐ If you found this project helpful, please give it a star!
-```
