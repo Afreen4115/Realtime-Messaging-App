@@ -12,6 +12,7 @@ import toast from 'react-hot-toast';
 //merging to main here
 
 //navya to  main
+
 const LoginPage = () => {
     const [email, setEmail] = React.useState<string>("");
     const [loading, setLoading] = React.useState<boolean>(false);
