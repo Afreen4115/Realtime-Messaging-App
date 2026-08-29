@@ -7,12 +7,14 @@ import { useAppContext, user_service } from '@/context/AppContext';
 import Loading from '@/components/Loading';
 import toast from 'react-hot-toast';
 
+//logining infsaadsada
+
 const LoginPage = () => {
     const [email, setEmail] = React.useState<string>("");
     const [loading, setLoading] = React.useState<boolean>(false);
     const router = useRouter();
 
-    const {isAuth,loading:userLoading}=useAppContext();
+    const { isAuth, loading: userLoading } = useAppContext();
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
@@ -33,10 +35,10 @@ const LoginPage = () => {
 
     }
 
-    if(userLoading){
-        return <Loading/>
+    if (userLoading) {
+        return <Loading />
     }
-    if(isAuth){
+    if (isAuth) {
         redirect('/chat')
     }
     return (
@@ -69,16 +71,16 @@ const LoginPage = () => {
                             />
                         </div>
                         <button className='w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed'>
-                            {loading?(
+                            {loading ? (
                                 <div className='flex items-center gap-2 justify-center'>
                                     <Loader2 className='w-5 h-5 animate-spin' />
                                     <span>Sending Otp to your email...</span>
                                 </div>
-                            ):(
+                            ) : (
                                 <div className='flex items-center gap-2 justify-center'>
-                                <span>Send Verification Code</span>
-                                <ArrowRight className='w-5 h-5' />
-                            </div>
+                                    <span>Send Verification Code</span>
+                                    <ArrowRight className='w-5 h-5' />
+                                </div>
                             )}
                         </button>
                     </form>
